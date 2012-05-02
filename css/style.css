@@ -1,0 +1,186 @@
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+	font-family:Georgia, serif;	
+	color:#292C37;
+	
+	-moz-text-shadow:0 0 1px rgba(41,44,55, .6);
+	-webkit-text-shadow:0 0 1px rgba(41,44,55, .6);
+	text-shadow:0 0 1px rgba(41,44,55, .6);
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+	font-family:Georgia, serif;		
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+body {
+	font: 16px/24px Georgia, serif;
+	color:#292C37;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgba(6,173,239,.25);}
+::-moz-selection 	{background:  rgba(6,173,239,.25);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgba(6,173,239,.25);}
+
+html{
+	background:#f7f7e9 url('../img/top.png') repeat-x left top;
+}
+
+body{
+	font-family:Helvetica, Arial, sans-serif;
+	
+	width:990px;
+	margin:0 auto;
+	padding:1em;
+}
+		
+#lienzo{
+	background:#F7F7E9;
+	border:2px solid #DEDED1;
+	margin-bottom:1em;
+	
+	-moz-box-shadow:0px 0px 4px rgba(0,0,0,.15);
+	-webkit-box-shadow:0px 0px 5px rgba(0,0,0,.2);
+	box-shadow:0px 0px 5px rgba(0,0,0,.2);
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+}
+		
+#juego{
+	float:left;
+	width:50%;
+	min-width:500px;
+	margin-top:1em;
+}
+
+#resultados:after{
+	content:".";
+	visibility:hidden;
+	clear:both;
+	display:block;
+	padding-bottom:3em;
+}
+
+#resultados{
+	margin-left:600px;
+	margin-top:1em;
+}
+
+#resultados ol{
+	margin-top:4em;
+}
+	
+form{
+	position:relative;
+}
+	
+form input{
+	background:#EA8C00;
+	color:#fff;
+	border:0;
+	height:46px;
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:bold;
+
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;	
+	border-radius:6px;
+	
+	-moz-text-shadow:0 -1px 0 rgba(0,0,0,.5);
+	-webkit-text-shadow:0 -1px 0 rgba(0,0,0,.5);
+	text-shadow:0 -1px 0 rgba(0,0,0,.5);
+}
+
+form input:hover{
+	cursor:pointer;
+}
+
+#botonEmpezar{
+	background:#06ADEF;
+	z-index:100;
+	width:504px;
+}
+
+#botonEmpezar:hover{
+	background:#47bfef;
+}
+
+#botonDetener{	
+	background:#C72546;
+	z-index:50;
+	width:504px;	
+}
+
+#botonDetener:hover{
+	background:#c75c71;
+}
+
+#reiniciarPartida{
+	background:#CBDDAC;
+}
+
+#reiniciarPartida:hover{
+	background:#b9c99d;
+}
+
+#gameResult{
+	font-weight:bold;
+}

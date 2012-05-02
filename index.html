@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<meta charset=utf-8>
+<title>Pshycho Car</title>	
+		<script src="js/json.js"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/results.js"></script>
+		<script src="js/animation.js"></script>
+		<script src="js/modernizr.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="intro">
+			<h1>Psycho Car</h1>
+			<p>Sí, me aburría y quería aprender a usar algunos elementos de HTML5 como <em>canvas</em> y <em>local storage</em>.
+			Si quieres probarlo, se trata de la típico test de psicotécnico de carnet de conducir: hay que intentar averiguar 
+			cuándo saldrá del túnel el &quot;coche&quot;. Tendrás que superar 4 intentos con una diferencia total de 1 segundo como máximo para ganar.</p>
+			<p>¡Ah! Y no te preocupes: si viene tu jefe puedes cerrarlo porque ¡no perderás 
+			los resultados de la partida!</p>
+		</div>
+		<div id="juego">
+			<canvas id="lienzo" width="500" height="375">
+			</canvas>
+			<form>
+				<input id="botonEmpezar" type="button" value="Empezar" />
+				<input id="botonDetener" type="button" value="Detener" />
+			</form>
+		</div>
+		<div id="resultados">
+			<h2>Resultados</h2>
+			<form>
+				<input id="reiniciarPartida" type="button" value="Nueva Partida" />
+			</form>
+			<ol>
+			</ol>
+			<p id="total">Total: <span>0</span></p>
+			<p id="gameResult"></p>
+		</div>		
+		
+		<script>
+			if(Modernizr.canvas&&Modernizr.localstorage)
+			{
+				animationModule.init($("#lienzo")[0].getContext("2d"));		
+				$('#botonEmpezar').click(animationModule.empezarClickHandler);
+				$('#botonDetener').click(animationModule.detenerClickHandler);
+				$('#reiniciarPartida').click(animationModule.nuevaPartidaClickHandler);
+				animationModule.draw();
+			}
+			else
+				alert("Tu navegador no está preparado para tanto... Prueba con Firefox, Chrome, Safari u Opera, por ejemplo");
+		</script>		
+	</body>
+</html>
